@@ -1,2 +1,2 @@
 # Portfolio
-My portfolio made using Html, Css and Js
+My portfolio made using Html and Css
