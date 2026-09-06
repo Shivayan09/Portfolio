@@ -8,8 +8,8 @@ export const profile = {
   phone: "+91-9435553309",
   phoneHref: "tel:+919435553309",
   email: "shivayanchak@gmail.com",
-  linkedin: "#",
-  github: "#",
+  linkedin: "https://www.linkedin.com/in/shivayan-chakravarty-806702294/",
+  github: "https://github.com/Shivayan09",
   intro:
     "I build and ship full products end to end. Next.js and React on the front, distributed systems, real-time services and AI pipelines in Node.js and TypeScript behind them. B.Tech student at Assam Engineering College, Guwahati.",
 };
@@ -93,8 +93,8 @@ export const projects: Project[] = [
       "Developed social features including profiles, posts, likes, comments, follows, and user interactions.",
     ],
     stack: ["Next.js", "Node.js", "Express.js", "MongoDB", "Socket.IO"],
-    live: "#",
-    source: "#",
+    live: "https://vector-social-media.vercel.app/",
+    source: "https://github.com/Shivayan09/Vector-social-media",
   },
   {
     number: "02",
@@ -118,8 +118,8 @@ export const projects: Project[] = [
       "Gemini",
       "Groq",
     ],
-    live: "#",
-    source: "#",
+    live: "https://syntropytest.in",
+    source: "https://syntropytest.in",
   },
 ];
 

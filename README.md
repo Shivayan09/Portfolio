@@ -28,8 +28,9 @@ IntersectionObserver that highlights the active nav item while scrolling.
 1. **Résumé** — drop the PDF at `public/Shivayan-Chakravarty-Resume.pdf`
    (the filename `RESUME_URL` in `lib/content.ts` points at). Nothing renders
    the file, so the link 404s until it's there.
-2. **Links** — `profile.linkedin`, `profile.github`, and each project's
-   `live` / `source` are `"#"` placeholders in `lib/content.ts`.
+2. **Links** are all live in `lib/content.ts`. One exception: Syntropy's repo is
+   private, so its "Source" button points at the Syntropy site rather than a
+   GitHub URL.
 
 ## Design tokens
 
