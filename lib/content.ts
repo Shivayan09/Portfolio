@@ -1,4 +1,4 @@
-export const RESUME_URL = "/Shivayan-Chakravarty-Resume.pdf";
+export const RESUME_URL = "/resume.pdf";
 
 export const profile = {
   name: "Shivayan Chakravarty",
@@ -47,7 +47,7 @@ export const stats = [
 export const about = {
   paragraphs: [
     "I work across the whole stack: typed React and Next.js interfaces on one end, authorization pipelines, caching and rate limiting, message queues and WebSocket state on the other. Owning both ends means the contract between them is something I design rather than inherit.",
-    "Alongside that I compete regularly — 500+ problems on LeetCode, Specialist on Codeforces — and mentor students in DSA and software engineering at my college.",
+    "Alongside that I compete regularly - 500+ problems on LeetCode, Specialist on Codeforces - and mentor students in DSA and software engineering at my college.",
   ],
   tags: [
     { label: "Full-stack engineering", accent: true },
@@ -61,10 +61,10 @@ export const about = {
 
 export const experience = {
   role: "Software Engineer Intern",
-  period: "MAY 2026 — JUL 2026",
+  period: "MAY 2026 - JUL 2026",
   company: "VRIXAALABS PVT LTD · HYBRID",
   bullets: [
-    "Engineered 3 production-oriented backend improvements in a Node.js/TypeScript microservices platform — centralized RBAC authorization, utility refactoring, and global Redis-based rate limiting.",
+    "Engineered 3 production-oriented backend improvements in a Node.js/TypeScript microservices platform - centralized RBAC authorization, utility refactoring, and global Redis-based rate limiting.",
     "Strengthened distributed-system infrastructure with Redis Pub/Sub, Socket.IO Adapter and clustered-cron strategies, global request throttling, and MongoDB connection-pool tuning.",
     "Architected a centralized permission evaluation pipeline aggregating memberships, entity-role assignments, and role-derived permissions; exposed the effective permission set through GraphQL and integrated it into entitlement authorization, eliminating fragmented permission evaluation across backend flows and improving consistency.",
   ],
@@ -161,14 +161,14 @@ export const engineeringSkills =
 
 export const leadership = [
   {
-    period: "MAY 2026 — JUL 2026",
+    period: "MAY 2026 - JUL 2026",
     role: "Project Admin",
     org: "NEXUS SPRING OF CODE · REMOTE",
     summary:
       "Merged 200+ pull requests, mentored 50+ contributors, and helped grow the project to 30+ GitHub stars.",
   },
   {
-    period: "JUL 2025 — JUN 2026",
+    period: "JUL 2025 - JUN 2026",
     role: "President",
     org: "ASSAM ENGINEERING COLLEGE, GUWAHATI",
     summary:
@@ -182,7 +182,7 @@ export const education = [
     institution: "ASSAM ENGINEERING COLLEGE, GUWAHATI",
     result: "CGPA 7.87",
     resultPrefix: "CGPA ",
-    years: "2023 — 2027",
+    years: "2023 - 2027",
   },
   {
     degree: "Higher Secondary Certificate",

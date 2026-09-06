@@ -24,7 +24,7 @@ export default function Contact() {
               </span>
             </h2>
             <p className="m-0 max-w-[40ch] text-mist">
-              Open to internships and full-stack roles. Email is fastest — I reply
+              Open to internships and full-stack roles. Email is fastest - I reply
               to everything.
             </p>
           </div>

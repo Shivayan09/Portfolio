@@ -17,11 +17,11 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Shivayan Chakravarty — Full-Stack Engineer",
+  title: "Shivayan Chakravarty - Full-Stack Engineer",
   description:
     "Full-stack engineer building distributed systems, real-time services and AI pipelines in Node.js, TypeScript and Next.js. B.Tech student at Assam Engineering College, Guwahati.",
   openGraph: {
-    title: "Shivayan Chakravarty — Full-Stack Engineer",
+    title: "Shivayan Chakravarty - Full-Stack Engineer",
     description:
       "Full-stack engineer building distributed systems, real-time services and AI pipelines in Node.js, TypeScript and Next.js.",
     type: "website",
