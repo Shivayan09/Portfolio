@@ -10,8 +10,6 @@ export const profile = {
   email: "shivayanchak@gmail.com",
   linkedin: "https://www.linkedin.com/in/shivayan-chakravarty-806702294/",
   github: "https://github.com/Shivayan09",
-  intro:
-    "I build and ship full products end to end. Next.js and React on the front, distributed systems, real-time services and AI pipelines in Node.js and TypeScript behind them. B.Tech student at Assam Engineering College, Guwahati.",
 };
 
 export const sections = [

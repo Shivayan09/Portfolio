@@ -1,3 +1,4 @@
+import RocketLaunch from "@/components/RocketLaunch";
 import { RESUME_URL, profile } from "@/lib/content";
 
 export default function Hero() {
@@ -12,34 +13,43 @@ export default function Hero() {
         }}
       />
 
-      <div className="relative grid animate-rise grid-cols-[minmax(0,1fr)] gap-[clamp(28px,4vw,44px)]">
-        <h1 className="m-0 text-[clamp(52px,12.5vw,172px)] font-bold uppercase leading-[0.86] tracking-[-0.045em]">
-          <span className="block">Software</span>
-          <span className="stroke-text block [--stroke:var(--color-slate)]">
-            engineer
-          </span>
-          <span className="block text-acid">who ships</span>
-        </h1>
+      <div className="relative grid animate-rise gap-[clamp(28px,4vw,44px)]">
+        <div className="grid items-center gap-10 lg:grid-cols-[auto_minmax(0,1fr)]">
+          <h1 className="m-0 text-[clamp(46px,11.2vw,154px)] font-bold uppercase leading-[0.86] tracking-[-0.045em]">
+            {/* All three lines are set flush to the same width. Measured from
+                Space Grotesk Bold at this tracking, the words run 4.762em /
+                4.200em / 4.815em, so each is scaled up to WHO SHIPS' 4.815em -
+                the widest line keeps the h1 size, so the block's footprint is
+                unchanged. Tracking is redeclared per line so it resolves against
+                that line's own font-size rather than inheriting the h1's
+                absolute value, which is what keeps the widths exact. */}
+            <span className="block text-[1.011em] tracking-[-0.045em]">
+              Software
+            </span>
+            <span className="block text-[1.146em] tracking-[-0.045em]">
+              engineer
+            </span>
+            <span className="block text-acid">who ships</span>
+          </h1>
 
-        <div className="grid grid-cols-[repeat(auto-fit,minmax(240px,1fr))] gap-[clamp(20px,3vw,44px)] border-t border-bone/14 pt-[22px]">
-          <p className="m-0 max-w-[46ch] text-pretty text-[clamp(16px,1.5vw,19px)] text-mist">
-            {profile.intro}
-          </p>
+          <RocketLaunch />
+        </div>
 
-          <div className="grid content-start gap-[7px] font-mono text-[12.5px] text-ash">
-            <div>
+        <div className="flex flex-wrap items-center justify-between gap-x-[clamp(20px,3vw,44px)] gap-y-6 border-t border-bone/14 pt-[22px]">
+          <div className="flex flex-wrap items-center gap-x-6 gap-y-2 font-mono text-[14px] text-ash">
+            <span>
               <span className="text-acid">›</span> {profile.location}
-            </div>
-            <div>
+            </span>
+            <span>
               <span className="text-acid">›</span> {profile.phone}
-            </div>
-            <div>
+            </span>
+            <span>
               <span className="text-acid">›</span> {profile.email}
               <span className="animate-blink text-acid">_</span>
-            </div>
+            </span>
           </div>
 
-          <div className="flex flex-wrap content-start gap-2.5">
+          <div className="flex flex-wrap gap-2.5">
             <a
               href="#projects"
               className="bg-acid px-5 py-3 font-mono text-[12px] font-bold uppercase tracking-[0.1em] text-ink transition-colors hover:bg-bone"
