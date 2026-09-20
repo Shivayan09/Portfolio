@@ -57,16 +57,43 @@ export const about = {
   ],
 };
 
-export const experience = {
-  role: "Software Engineer Intern",
-  period: "MAY 2026 - JUL 2026",
-  company: "VRIXAALABS PVT LTD · HYBRID",
-  bullets: [
-    "Engineered 3 production-oriented backend improvements in a Node.js/TypeScript microservices platform - centralized RBAC authorization, utility refactoring, and global Redis-based rate limiting.",
-    "Strengthened distributed-system infrastructure with Redis Pub/Sub, Socket.IO Adapter and clustered-cron strategies, global request throttling, and MongoDB connection-pool tuning.",
-    "Architected a centralized permission evaluation pipeline aggregating memberships, entity-role assignments, and role-derived permissions; exposed the effective permission set through GraphQL and integrated it into entitlement authorization, eliminating fragmented permission evaluation across backend flows and improving consistency.",
-  ],
+export type ExperienceEntry = {
+  role: string;
+  period: string;
+  company: string;
+  bullets: string[];
 };
+
+export const experience: ExperienceEntry[] = [
+  {
+    role: "Software Engineer Intern",
+    period: "AUG 2026 - PRESENT",
+    company: "VIBRND · GUWAHATI",
+    bullets: [
+      "Built full-stack features across multiple production platforms using Next.js, Java/Spring Boot, Express.js and MongoDB.",
+      "Working on a RAG-based AI concierge built with LangChain and LLMs.",
+    ],
+  },
+  {
+    role: "Software Engineer Intern",
+    period: "MAY 2026 - JUL 2026",
+    company: "VRIXAALABS PVT LTD · TEZPUR",
+    bullets: [
+      "Built scalable backend infrastructure for a production social networking platform using Node.js, Express.js, MongoDB, Redis, Socket.IO and GraphQL.",
+      "Strengthened distributed-system infrastructure with Redis-backed real-time communication, global rate limiting, PM2 cluster-safe cron execution, and backend performance optimizations.",
+      "Architected a centralized permission evaluation pipeline aggregating memberships, entity-role assignments, and role-derived permissions; exposed the effective permission set through GraphQL and integrated it into entitlement authorization, eliminating fragmented permission evaluation across backend flows.",
+    ],
+  },
+  {
+    role: "Summer Research Intern",
+    period: "JUN 2025 - NOV 2025",
+    company: "INDIAN INSTITUTE OF TECHNOLOGY, GUWAHATI",
+    bullets: [
+      "Conducted research on deep learning and neural networks, implementing models from scratch using NumPy and validating experiments with PyTorch.",
+      "Investigated representation learning, optimization, model capacity, underfitting and overfitting through experimental analysis and reproducible research workflows.",
+    ],
+  },
+];
 
 export type Project = {
   number: string;
