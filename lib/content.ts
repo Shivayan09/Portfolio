@@ -71,7 +71,7 @@ export const experience: ExperienceEntry[] = [
     company: "VIBRND · GUWAHATI",
     bullets: [
       "Built full-stack features across multiple production platforms using Next.js, Java/Spring Boot, Express.js and MongoDB.",
-      "Working on a RAG-based AI concierge built with LangChain and LLMs.",
+      "Working on a RAG-based AI systems using LangChain and LLMs.",
     ],
   },
   {
