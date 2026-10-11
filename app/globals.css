@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+/* Screens wide enough to pin the Experience box and swap companies on
+   scroll. Narrower screens switch companies by tapping instead. */
+@custom-variant stage (@media (min-width: 64rem));
+
 @theme {
   /* Palette */
   --color-ink: #060607;

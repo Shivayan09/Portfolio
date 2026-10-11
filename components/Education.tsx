@@ -3,7 +3,7 @@ import { education } from "@/lib/content";
 
 export default function Education() {
   return (
-    <Section id="education" index="06" label="Edu">
+    <Section id="education" title="Education">
       <div>
         {education.map((entry, index) => (
           <div

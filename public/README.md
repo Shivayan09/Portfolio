@@ -1,2 +1,4 @@
-Put `Shivayan-Chakravarty-Resume.pdf` here — the hero and contact "Résumé"
-buttons link to `/Shivayan-Chakravarty-Resume.pdf`.
+- `resume.pdf` — linked from the hero and contact "Résumé" buttons.
+- `logos/` — square company marks for the Work section (`logo` on each entry in `lib/content.ts`). Set `logoTile: "light"` for dark marks that vanish on black, or `"bleed"` for marks with their own background.
+- `projects/` — project screenshots (`images` on each project; the first is the cover).
+- `docs/` — offer letters, certificates and recommendations (`attachments` on each experience entry). PDFs and images both open in the in-page viewer.

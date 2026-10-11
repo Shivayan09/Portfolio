@@ -3,7 +3,7 @@ import { leadership } from "@/lib/content";
 
 export default function Leadership() {
   return (
-    <Section id="leadership" index="05" label="Lead">
+    <Section id="leadership" title="Leadership">
       <div className="grid grid-cols-[repeat(auto-fit,minmax(280px,1fr))] gap-[18px]">
         {leadership.map((role) => (
           <div

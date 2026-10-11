@@ -3,7 +3,7 @@ import { engineeringSkills, skillGroups } from "@/lib/content";
 
 export default function Skills() {
   return (
-    <Section id="skills" index="04" label="Stack">
+    <Section id="skills" title="Tech Stack">
       <div className="grid">
         {skillGroups.map((group) => (
           <SkillRow key={group.label} label={group.label}>

@@ -3,12 +3,12 @@ import { about } from "@/lib/content";
 
 export default function About() {
   return (
-    <Section id="about" index="01" label="About">
-      <h2 className="m-0 mb-6 max-w-[24ch] text-balance text-[clamp(28px,4.4vw,54px)] font-bold uppercase leading-[1.02] tracking-[-0.035em]">
+    <Section id="about" title="About">
+      <h3 className="m-0 mb-6 max-w-[24ch] text-balance text-[clamp(28px,4.4vw,54px)] font-bold uppercase leading-[1.02] tracking-[-0.035em]">
         Systems that hold up
         <br />
         under <span className="text-acid">load</span>.
-      </h2>
+      </h3>
 
       <div className="grid grid-cols-[repeat(auto-fit,minmax(260px,1fr))] gap-[clamp(20px,3vw,44px)]">
         {about.paragraphs.map((paragraph) => (

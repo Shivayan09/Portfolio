@@ -14,7 +14,7 @@ export default function Contact() {
         <div className="grid grid-cols-[repeat(auto-fit,minmax(280px,1fr))] items-end gap-[clamp(26px,4vw,60px)]">
           <div>
             <div className="mb-[18px] font-mono text-[11px] uppercase tracking-[0.16em] text-acid">
-              07 / Contact
+              Contact
             </div>
             <h2 className="m-0 mb-4 text-balance text-[clamp(30px,5.6vw,68px)] font-bold uppercase leading-[0.96] tracking-[-0.045em]">
               Let&apos;s build

@@ -13,7 +13,7 @@ import Stats from "@/components/Stats";
 
 export default function Home() {
   return (
-    <div className="relative min-h-screen overflow-x-hidden bg-ink text-bone">
+    <div className="relative min-h-screen overflow-x-clip bg-ink text-bone">
       <GridField />
       <Header />
       <main id="top" className="relative z-1">

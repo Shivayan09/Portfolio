@@ -1,72 +1,89 @@
+import ProjectGallery from "@/components/ProjectGallery";
 import Section from "@/components/Section";
 import { type Project, projects } from "@/lib/content";
 
 export default function Projects() {
   return (
-    <Section id="projects" index="03" label="Builds">
-      <div className="grid gap-[18px]">
-        {projects.map((project) => (
-          <ProjectCard key={project.name} project={project} />
+    <Section id="projects" title="Projects">
+      <div className="border-b border-bone/10">
+        {projects.map((project, index) => (
+          <ProjectRow
+            key={project.name}
+            project={project}
+            mirrored={index % 2 === 1}
+          />
         ))}
       </div>
     </Section>
   );
 }
 
-function ProjectCard({ project }: { project: Project }) {
+/**
+ * An open editorial row: screenshot on one side, write-up on the other,
+ * divided from the next project by a hairline. Alternate rows swap sides.
+ */
+function ProjectRow({
+  project,
+  mirrored,
+}: {
+  project: Project;
+  mirrored: boolean;
+}) {
   return (
-    <article className="relative overflow-hidden border border-bone/14 p-[clamp(22px,3.4vw,38px)] transition-colors hover:border-acid hover:bg-acid/[0.045]">
-      <div
-        aria-hidden
-        className="stroke-text pointer-events-none absolute right-0 top-0 pr-[14px] pt-1.5 text-[clamp(70px,11vw,150px)] font-bold leading-[0.8] tracking-[-0.06em] [--stroke:rgba(242,243,238,0.1)]"
-      >
-        {project.number}
-      </div>
+    <article className="grid items-center gap-[clamp(28px,4.5vw,64px)] border-t border-bone/10 py-[clamp(36px,5vw,64px)] lg:grid-cols-[minmax(0,1.15fr)_minmax(0,1fr)]">
+      {project.images.length > 0 && (
+        <div className={mirrored ? "lg:order-2" : ""}>
+          <ProjectGallery
+            name={project.name}
+            url={project.live}
+            images={project.images}
+          />
+        </div>
+      )}
 
-      <div className="relative">
-        <div className="flex flex-wrap items-baseline gap-3.5">
-          <h3 className="m-0 text-[clamp(26px,3.6vw,42px)] font-bold uppercase tracking-[-0.04em]">
-            {project.name}
-          </h3>
-          <span className="font-mono text-[11.5px] uppercase tracking-[0.1em] text-acid">
-            {project.tagline}
-          </span>
-          <span className="ml-auto font-mono text-[11.5px] text-slate">
-            {project.date}
-          </span>
+      <div>
+        <div className="font-mono text-[11.5px] tracking-[0.06em] text-slate">
+          <span className="text-acid">{project.number}</span>
+          <span className="mx-2.5 text-char">/</span>
+          {project.date}
         </div>
 
-        <ul className="m-0 mt-5 grid max-w-[70ch] list-none gap-[11px] p-0 text-mist">
+        <h3 className="m-0 mt-4 text-[clamp(32px,4vw,52px)] font-bold uppercase leading-[0.92] tracking-[-0.045em]">
+          {project.name}
+        </h3>
+        <p className="m-0 mt-3 font-mono text-[11.5px] uppercase tracking-[0.1em] text-acid">
+          {project.tagline}
+        </p>
+
+        <ul className="m-0 mt-6 grid list-none gap-2.5 p-0 text-[15px] leading-[1.55] text-mist">
           {project.bullets.map((bullet) => (
             <li key={bullet} className="flex gap-3">
-              <span className="text-acid">▸</span>
+              <span aria-hidden className="text-acid">
+                —
+              </span>
               {bullet}
             </li>
           ))}
         </ul>
 
-        <div className="mt-6 flex flex-wrap gap-[7px] font-mono text-[10.5px] uppercase tracking-[0.08em] text-ash">
-          {project.stack.map((item) => (
-            <span key={item} className="bg-bone/[0.07] px-2.5 py-[5px]">
-              {item}
-            </span>
-          ))}
-        </div>
+        <p className="m-0 mt-6 font-mono text-[11px] uppercase leading-[1.8] tracking-[0.08em] text-ash">
+          {project.stack.join(" · ")}
+        </p>
 
-        <div className="mt-6 flex gap-2 font-mono text-[11px] uppercase tracking-[0.1em]">
+        <div className="mt-6 flex gap-6 font-mono text-[11.5px] uppercase tracking-[0.1em]">
           <a
             href={project.live}
             target="_blank"
             rel="noopener"
-            className="border border-acid/45 px-[15px] py-[9px] text-acid transition-colors hover:bg-acid hover:text-ink"
+            className="border-b border-acid pb-1 text-acid transition-colors hover:border-bone hover:text-bone"
           >
-            Live ↗
+            Live site ↗
           </a>
           <a
             href={project.source}
             target="_blank"
             rel="noopener"
-            className="border border-bone/20 px-[15px] py-[9px] text-mist transition-colors hover:border-bone hover:text-bone"
+            className="border-b border-bone/25 pb-1 text-mist transition-colors hover:border-bone hover:text-bone"
           >
             Source ↗
           </a>
